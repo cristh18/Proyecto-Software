@@ -40,7 +40,7 @@
 		<%
 			}
 		%>
-		<img alt="venta" src="imagenes/venta.jpg" id="imagenVenta">
+		<h1>Información Venta</h1>
 		<%
 			if (listaCarros.size() == 0 && ventaNueva) {
 		%>
@@ -108,34 +108,34 @@
 				</script>
 
 				<%
-							if (listaCarros.size() > 0) {
-						%>
+					if (listaCarros.size() > 0) {
+				%>
 				<label for="placaCarro">Placa carro: <span class="required">*</span></label>
 				<select name="placaCarro" id="placaCarro"
 					onchange="javascript:cargarCarro('informacionCarro.jsp', 'placaCarro', 'informacionCarro')">
 					<option></option>
 					<%
-										if (!ventaNueva) {
-									%>
+						if (!ventaNueva) {
+					%>
 					<option value="<%=venta.getIdCarroVenta().getPlacaCarro()%>"
 						selected="selected"><%=venta.getIdCarroVenta().getPlacaCarro()%></option>
 					<%
-										}
-												for (int i = 0; i < listaCarros.size(); i++) {
-													carro = listaCarros.get(i);
-									%>
+						}
+								for (int i = 0; i < listaCarros.size(); i++) {
+									carro = listaCarros.get(i);
+					%>
 					<option value="<%=carro.getPlacaCarro()%>"><%=carro.getPlacaCarro()%></option>
 					<%
-										}
-									%>
+						}
+					%>
 				</select> <label for="informacionCarro">Información carro: <span
 					class="required">*</span></label>
 				<p id="informacionCarro"><jsp:include
 						page="informacionCarro.jsp"></jsp:include>
 				<p>
 					<%
-							}
-						%>
+						}
+					%>
 
 					<label for="cedulaComprador">Cédula comprador: <span
 						class="required">*</span></label> <select name="cedulaComprador"
@@ -143,22 +143,22 @@
 						onchange="javascript:cargarPersona('informacionPersona.jsp', 'cedulaComprador', 'informacionPersona')">
 						<option></option>
 						<%
-										for (int i = 0; i < listaCompradores.size(); i++) {
-												persona = listaCompradores.get(i);
-												if (venta.getIdClienteVenta().getCedulaPersona()
-														.equals(persona.getCedulaPersona())) {
-									%>
+							for (int i = 0; i < listaCompradores.size(); i++) {
+									persona = listaCompradores.get(i);
+									if (venta.getIdClienteVenta().getCedulaPersona()
+											.equals(persona.getCedulaPersona())) {
+						%>
 						<option value="<%=persona.getCedulaPersona()%>"
 							selected="selected">
 							<%=persona.getCedulaPersona()%></option>
 						<%
-										} else {
-									%>
+							} else {
+						%>
 						<option value="<%=persona.getCedulaPersona()%>"><%=persona.getCedulaPersona()%></option>
 						<%
-										}
-											}
-									%>
+							}
+								}
+						%>
 					</select> <label for="nombreComprador">Nombre comprador: <span
 						class="required">*</span></label>
 				<p id="informacionPersona"><jsp:include
@@ -174,8 +174,8 @@
 				<%
 					if (ventaNueva) {
 				%>
-				<input type="submit" name="guardar" value="Crear">
-				<input type="hidden" name="accion" value="guardar"><input
+				<input type="submit" name="guardar" value="Crear"> <input
+					type="hidden" name="accion" value="guardar"><input
 					type="hidden" name="cedulaVendedor"
 					value=<%=session.getAttribute("cedulaPersona").toString()%>>
 				<%
@@ -202,8 +202,9 @@
 				<%
 					}
 				%>
-				<button onclick="window.location.href='reporteVenta.jsp?idVenta=<%=venta.getIdVenta()%>'"
-	type="button">Generar reporte</button>
+				<button
+					onclick="window.location.href='reporteVenta.jsp?idVenta=<%=venta.getIdVenta()%>'"
+					type="button">Generar reporte</button>
 				<button onclick="window.location.href='venta.jsp'">Atras</button>
 				<%
 					}

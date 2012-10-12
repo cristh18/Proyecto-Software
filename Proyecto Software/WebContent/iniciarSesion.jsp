@@ -1,22 +1,23 @@
 <jsp:include page="encabezadoGeneral.jsp" />
 <section>
-	<div id="contact-form" class="clearfix">
-		<h1>Inicio sesion</h1>
-		<%
+
+	<h1>Iniciar sesión</h1>
+	<%
 			if (request.getParameter("error") != null) {
 				int numeroError = Integer.parseInt(request
 						.getParameter("error"));
 				if (numeroError == 1) {
 		%>
-		<h2>La cedula no existe.</h2>
-		<%
+	<h2>La cedula no existe.</h2>
+	<%
 			} else if (numeroError == 2) {
 		%>
-		<h2>La contrasenia no corresponde a la cedula.</h2>
-		<%
+	<h2>La contrasenia no corresponde a la cedula.</h2>
+	<%
 			}
 			}
 		%>
+	<div id="contact-form" class="clearfix">
 		<ul id="errors" class="">
 			<li id="info">There were some problems with your form
 				submission:</li>

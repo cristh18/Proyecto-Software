@@ -28,7 +28,7 @@
 		<%
 			}
 		%>
-		<img alt="Cliente" src="imagenes/cliente.jpg" id="imagenCliente">
+		<h1>Información Cliente</h1>
 		<%
 			if (request.getParameter("error") != null) {
 				int numeroError = Integer.parseInt(request
@@ -107,8 +107,8 @@
 					value="<%=persona.getTipoPersona()%>">
 
 				<%
-							if (persona.getTipoCliente() == 1) {
-						%>
+					if (persona.getTipoCliente() == 1) {
+				%>
 				<label for="nombre">Nombre: <span class="required">*</span></label>
 
 				<input type="text" name="nombrePersona"
@@ -122,8 +122,8 @@
 				<input type="text" name="cedulaPersona"
 					value="<%=persona.getCedulaPersona()%>" readonly="readonly">
 				<%
-							} else {
-						%>
+					} else {
+				%>
 				<label for="razonSocial">Razón social: <span
 					class="required">*</span></label> <input type="text" name="nombrePersona"
 					value="<%=persona.getNombrePersona()%>" required="required">
@@ -133,8 +133,8 @@
 					type="text" name="cedulaPersona"
 					value="<%=persona.getCedulaPersona()%>" readonly="readonly">
 				<%
-							}
-						%>
+					}
+				%>
 
 				<%
 					}
@@ -154,16 +154,16 @@
 				<%
 					if (nuevoCliente) {
 				%>
-				<input type="submit" name="guardar" value="Crear">
-				<input type="hidden" name="accion" value="guardar">
+				<input type="submit" name="guardar" value="Crear"> <input
+					type="hidden" name="accion" value="guardar">
 				<%
 					} else {
 				%>
-				<input type="submit" name="guardar" value="Guardar"> <input type="hidden" name="accion"
-					value="editar">
-					<button
-	onclick="window.location.href='reportePersona.jsp?cedulaPersona=<%=persona.getCedulaPersona()%>'"
-	type="button">Generar reporte</button>
+				<input type="submit" name="guardar" value="Guardar"> <input
+					type="hidden" name="accion" value="editar">
+				<button
+					onclick="window.location.href='reportePersona.jsp?cedulaPersona=<%=persona.getCedulaPersona()%>'"
+					type="button">Generar reporte</button>
 				<button
 					onclick="window.location.href='eliminarPersona.jsp?tipoPersona=<%=3%>&cedulaPersona=<%=persona.getCedulaPersona()%>'"
 					type="button">Eliminar</button>

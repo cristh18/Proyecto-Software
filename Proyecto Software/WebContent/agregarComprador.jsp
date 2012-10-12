@@ -18,7 +18,7 @@
 		<%
 			}
 		%>
-		<img alt="cliente" src="imagenes/cliente.jpg" id="imagenCliente">
+		<h1>Información Cliente</h1>
 		<%
 			if (request.getParameter("error") != null) {
 				int numeroError = Integer.parseInt(request
@@ -31,14 +31,16 @@
 			}
 			}
 		%>
-		
-	<div id="contact-form" class="clearfix">  
-		<ul id="errors" class="">  
-	        <li id="info">There were some problems with your form submission:</li>  
-	     </ul>  
-	    <p id="success">Thanks for your message! We will get back to you ASAP!</p>  
-		<form method="post" action="guardarComprador.jsp">
-			<script type="text/javascript">
+
+		<div id="contact-form" class="clearfix">
+			<ul id="errors" class="">
+				<li id="info">There were some problems with your form
+					submission:</li>
+			</ul>
+			<p id="success">Thanks for your message! We will get back to you
+				ASAP!</p>
+			<form method="post" action="guardarComprador.jsp">
+				<script type="text/javascript">
 				var peticion = false;
 				var testPasado = false;
 				try {
@@ -71,32 +73,32 @@
 					peticion.send(null);
 				}
 			</script>
-			<label for="tipoPersona">Tipo persona: <span class="required">*</span></label>  
-			<select name="tipoPersona" id="tipoPersona"
-							onchange="javascript:cargarCampos('camposNueva.jsp', 'tipoPersona', 'informacionPersona')">
-								<option></option>
-								<option value="1">Persona natural</option>
-								<option value="2">Persona juridica</option>
-						</select>
-					
-			<table id="informacionPersona">
-				<tbody>
-					<jsp:include page="camposNueva.jsp"></jsp:include>
-				</tbody>
-			</table>
-			
-				<label for="telefono">Teléfono: <span class="required">*</span></label>  
-					<input type="text" name="telefonoPersona"
-							required="required">
-					
-				<label for="direccion">Dirección: <span class="required">*</span></label>  
-					<input type="text" name="direccionPersona">
-					
-				<label for="correo">Correo: <span class="required">*</span></label>  
-					<input type="email" name="correoPersona">
-			<input type="submit" name="guardar" value="Guardar">
-			<input onclick="window.location.href='editarVenta.jsp'" type="button" value="Atras">
-		</form>
+				<label for="tipoPersona">Tipo persona: <span
+					class="required">*</span></label> <select name="tipoPersona"
+					id="tipoPersona"
+					onchange="javascript:cargarCampos('camposNueva.jsp', 'tipoPersona', 'informacionPersona')">
+					<option></option>
+					<option value="1">Persona natural</option>
+					<option value="2">Persona juridica</option>
+				</select>
+
+				<table id="informacionPersona">
+					<tbody>
+						<jsp:include page="camposNueva.jsp"></jsp:include>
+					</tbody>
+				</table>
+
+				<label for="telefono">Teléfono: <span class="required">*</span></label>
+				<input type="text" name="telefonoPersona" required="required">
+
+				<label for="direccion">Dirección: <span class="required">*</span></label>
+				<input type="text" name="direccionPersona"> <label
+					for="correo">Correo: <span class="required">*</span></label> <input
+					type="email" name="correoPersona"> <input type="submit"
+					name="guardar" value="Guardar"> <input
+					onclick="window.location.href='editarVenta.jsp'" type="button"
+					value="Atras">
+			</form>
 		</div>
 	</section>
 </section>

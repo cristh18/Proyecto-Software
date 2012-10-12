@@ -20,7 +20,7 @@
 		<%
 			}
 		%>
-		<img alt="modelo" src="imagenes/modelo.jpg" id="imagenModelo">
+		<h1>Información Modelo</h1>
 		<%
 			if (request.getParameter("error") != null) {
 				int numeroError = Integer.parseInt(request
@@ -53,11 +53,10 @@
 					%>
 				</select> <label for="nombreModelo">Nombre modelo: <span
 					class="required">*</span></label> <input type="text" name="nombreModelo"
-					required="required">
-				
-							<input type="submit" name="guardar" value="Guardar">
-
-							<input onclick="window.location.href='editarAutomovil.jsp'" type="button" value="Atras">
+					required="required"> <input type="submit" name="guardar"
+					value="Guardar"> <input
+					onclick="window.location.href='editarAutomovil.jsp'" type="button"
+					value="Atras">
 			</form>
 		</div>
 	</section>

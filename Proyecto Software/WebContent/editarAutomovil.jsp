@@ -74,7 +74,7 @@
 		<%
 			}
 		%>
-		<img alt="Carro" src="imagenes/vehiculo.jpg" id="imagenVehiculo">
+		<h1>Información Automóvil</h1>
 		<%
 			if (request.getParameter("error") != null) {
 				int numeroError = Integer.parseInt(request
@@ -158,20 +158,20 @@
 					onchange="javascript:cargarCombo('modelos.jsp', 'marcaCarro', 'modeloCarro')">
 					<option></option>
 					<%
-										for (int i = 0; i < listaMarcas.size(); i++) {
-											marca = listaMarcas.get(i);
-											if (marca.getIdMarca() == carro.getIdModeloCarro()
-													.getIdMarcaModelo().getIdMarca()) {
-									%>
+						for (int i = 0; i < listaMarcas.size(); i++) {
+							marca = listaMarcas.get(i);
+							if (marca.getIdMarca() == carro.getIdModeloCarro()
+									.getIdMarcaModelo().getIdMarca()) {
+					%>
 					<option value="<%=marca.getIdMarca()%>" selected="selected"><%=marca.getNombreMarca()%></option>
 					<%
-										} else {
-									%>
+						} else {
+					%>
 					<option value="<%=marca.getIdMarca()%>"><%=marca.getNombreMarca()%></option>
 					<%
-										}
-										}
-									%>
+						}
+						}
+					%>
 				</select> <label for="modelo">Modelo: <span class="required">*</span></label>
 				<p id="modeloCarro"><jsp:include page="modelos.jsp"></jsp:include></p>
 
@@ -179,89 +179,89 @@
 					<span class="required">*</span>
 				</label> <select name="colorCarro">
 					<%
-										for (int i = 0; i < listaColores.size(); i++) {
-											color = listaColores.get(i);
-											if (color.getIdColor() == carro.getIdColorCarro().getIdColor()) {
-									%>
+						for (int i = 0; i < listaColores.size(); i++) {
+							color = listaColores.get(i);
+							if (color.getIdColor() == carro.getIdColorCarro().getIdColor()) {
+					%>
 					<option value="<%=color.getIdColor()%>" selected="selected"><%=color.getNombreColor()%></option>
 					<%
-										} else {
-									%>
+						} else {
+					%>
 					<option value="<%=color.getIdColor()%>"><%=color.getNombreColor()%></option>
 					<%
-										}
-										}
-									%>
+						}
+						}
+					%>
 				</select> <label for="vidrio">Vidrio: <span class="required">*</span></label>
 				<select name="vidrioCarro">
 					<%
-										for (int i = 0; i < listaVidrios.size(); i++) {
-											vidrio = listaVidrios.get(i);
-											if (vidrio.getIdVidrio() == carro.getIdVidrioCarro()
-													.getIdVidrio()) {
-									%>
+						for (int i = 0; i < listaVidrios.size(); i++) {
+							vidrio = listaVidrios.get(i);
+							if (vidrio.getIdVidrio() == carro.getIdVidrioCarro()
+									.getIdVidrio()) {
+					%>
 					<option value="<%=vidrio.getIdVidrio()%>" selected="selected"><%=vidrio.getNombreVidrio()%></option>
 					<%
-										} else {
-									%>
+						} else {
+					%>
 					<option value="<%=vidrio.getIdVidrio()%>"><%=vidrio.getNombreVidrio()%></option>
 					<%
-										}
-										}
-									%>
+						}
+						}
+					%>
 				</select> <label for="combustible">Combustible: <span
 					class="required">*</span></label> <select name="combustibleCarro">
 					<%
-										for (int i = 0; i < listaCombustibles.size(); i++) {
-											combustible = listaCombustibles.get(i);
-											if (combustible.getIdCombustible() == carro
-													.getIdCombustibleCarro().getIdCombustible()) {
-									%>
+						for (int i = 0; i < listaCombustibles.size(); i++) {
+							combustible = listaCombustibles.get(i);
+							if (combustible.getIdCombustible() == carro
+									.getIdCombustibleCarro().getIdCombustible()) {
+					%>
 					<option value="<%=combustible.getIdCombustible()%>"
 						selected="selected"><%=combustible.getNombreCombustible()%></option>
 					<%
-										} else {
-									%>
+						} else {
+					%>
 					<option value="<%=combustible.getIdCombustible()%>"><%=combustible.getNombreCombustible()%></option>
 					<%
-										}
-										}
-									%>
+						}
+						}
+					%>
 				</select> <label for="direccion">Dirección: <span class="required">*</span></label>
 				<select name="direccionCarro">
 					<%
-										for (int i = 0; i < listaDirecciones.size(); i++) {
-											direccion = listaDirecciones.get(i);
-											if (direccion.getIdDireccion() == carro.getIdDireccionCarro()
-													.getIdDireccion()) {
-									%>
+						for (int i = 0; i < listaDirecciones.size(); i++) {
+							direccion = listaDirecciones.get(i);
+							if (direccion.getIdDireccion() == carro.getIdDireccionCarro()
+									.getIdDireccion()) {
+					%>
 					<option value="<%=direccion.getIdDireccion()%>" selected="selected"><%=direccion.getNombreDireccion()%></option>
 					<%
-										} else {
-									%>
+						} else {
+					%>
 					<option value="<%=direccion.getIdDireccion()%>"><%=direccion.getNombreDireccion()%></option>
 					<%
-										}
-										}
-									%>
+						}
+						}
+					%>
 				</select> <label for="transmision">Transmisión: <span
 					class="required">*</span></label> <select name="transmisionCarro">
 					<%
-										for (int i = 0; i < listaTransmisiones.size(); i++) {
-											transmision = listaTransmisiones.get(i);
-											if (transmision.getIdTransmision() == carro
-													.getIdTransmisionCarro().getIdTransmision()) {
-									%>
+						for (int i = 0; i < listaTransmisiones.size(); i++) {
+							transmision = listaTransmisiones.get(i);
+							if (transmision.getIdTransmision() == carro
+									.getIdTransmisionCarro().getIdTransmision()) {
+					%>
 					<option value="<%=transmision.getIdTransmision()%>"
 						selected="selected"><%=transmision.getNombreTransmision()%></option>
 					<%
-										} else {
-									%>
+						} else {
+					%>
 					<option value="<%=transmision.getIdTransmision()%>"><%=transmision.getNombreTransmision()%></option>
 					<%
-										}
-										}
-									%>
+						}
+						}
+					%>
 				</select> <label for="cilindraje">Cilindraje: <span class="required">*</span></label>
 				<input type="number" min="1" max="999999999" name="cilindrajeCarro"
 					value="<%=carro.getCilindrajeCarro()%>"> <label for="anio">Año:
@@ -272,12 +272,12 @@
 				</label> <input type="number" min="1" max="999999999" name="precioCarro"
 					value="<%=carro.getPrecioCarro()%>">
 				<%
-							if (!carroNuevo && listaImagenes.size() > 0) {
-						%>
+					if (!carroNuevo && listaImagenes.size() > 0) {
+				%>
 
 				<%
-									for (int i = 0; i < listaImagenes.size(); i++) {
-								%>
+					for (int i = 0; i < listaImagenes.size(); i++) {
+				%>
 				<a
 					href="eliminarImagen.jsp?idImagen=<%=listaImagenes.get(i).getIdImagen()%>&placaCarro=<%=request.getParameter("placaCarro")%>"
 					onclick="return confirm('Está seguro que desea eliminar la imagen.')">
@@ -286,12 +286,12 @@
 					width="150" height="150" border="1" />Eliminar
 				</a>
 				<%
- 	}
- %>
+					}
+				%>
 
 				<%
-							}
-						%>
+					}
+				%>
 
 				<label for="imagenes">Imágenes: <span class="required">*</span></label>
 				<input type="file" name="imagen" multiple="multiple"> <label
@@ -301,21 +301,21 @@
 					onchange="javascript:cargarPersona('informacionPersona.jsp', 'propietarioCarro', 'informacionPersona')">
 					<option></option>
 					<%
-										for (int i = 0; i < listaPersonas.size(); i++) {
-											propietario = listaPersonas.get(i);
-											if (propietario.getCedulaPersona() == carro
-													.getIdPropietarioPersona().getCedulaPersona()) {
-									%>
+						for (int i = 0; i < listaPersonas.size(); i++) {
+							propietario = listaPersonas.get(i);
+							if (propietario.getCedulaPersona() == carro
+									.getIdPropietarioPersona().getCedulaPersona()) {
+					%>
 					<option value="<%=propietario.getCedulaPersona()%>"
 						selected="selected"><%=propietario.getCedulaPersona()%></option>
 					<%
-										} else {
-									%>
+						} else {
+					%>
 					<option value="<%=propietario.getCedulaPersona()%>"><%=propietario.getCedulaPersona()%></option>
 					<%
-										}
-										}
-									%>
+						}
+						}
+					%>
 				</select> <label for="nombrePropietario">Nombre propietario: <span
 					class="required">*</span></label>
 				<p id="informacionPersona"><jsp:include
@@ -328,21 +328,22 @@
 				<%
 					if (carroNuevo) {
 				%>
-				<input type="submit" name="guardar" value="Crear">
-				<input type="hidden" name="accion" value="guardar">
+				<input type="submit" name="guardar" value="Crear"> <input
+					type="hidden" name="accion" value="guardar">
 				<%
 					} else {
 				%>
 				<input type="submit" name="guardar" value="Guardar">
-				<button onclick="window.location.href='reporteCarro.jsp?placaCarro=<%=carro.getCodigoCarro()%>'"
-	type="button">Generar reporte</button>
+				<button
+					onclick="window.location.href='reporteCarro.jsp?placaCarro=<%=carro.getCodigoCarro()%>'"
+					type="button">Generar reporte</button>
 				<button
 					onclick="window.location.href='eliminarCarro.jsp?tipoPersona=<%=tipoPersona%>&placaCarro=<%=carro.getPlacaCarro()%>'"
 					type="button">Eliminar</button>
 				<input type="hidden" name="accion" value="editar">
 				<%
-		}
-	%>
+					}
+				%>
 			</form>
 		</div>
 	</section>

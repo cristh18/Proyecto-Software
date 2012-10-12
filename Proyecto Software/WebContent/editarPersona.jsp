@@ -39,11 +39,11 @@
 			}
 			if (tipoPersona == 1) {
 		%>
-		<img alt="Admin" src="imagenes/admin.jpg" id="imagenAdmin">
+		<h1>Información Administrador</h1>
 		<%
 			} else if (tipoPersona == 2) {
 		%>
-		<img alt="vend" src="imagenes/vendedor.jpg" id="imagenVendedor">
+		<h1>Información Vendedor</h1>
 		<%
 			}
 			if (request.getParameter("error") != null) {
@@ -82,20 +82,20 @@
 					value="<%=persona.getApellidoPersona()%>" required="required">
 
 				<%
-						if (nuevaPersona) {
-					%>
+					if (nuevaPersona) {
+				%>
 				<label for="cedula">Cédula: <span class="required">*</span></label>
 				<input type="number" name="cedulaPersona" required="required">
 				<%
-						} else {
-					%>
+					} else {
+				%>
 
 				<label for="cedula">Cédula: <span class="required">*</span></label>
 				<input type="text" name="cedulaPersona" readonly="readonly"
 					value="<%=persona.getCedulaPersona()%>">
 				<%
-						}
-					%>
+					}
+				%>
 				<label for="telefono">Teléfono: <span class="required">*</span></label>
 				<input type="text" name="telefonoPersona"
 					value="<%=persona.getTelefonoPersona()%>" required="required">
@@ -108,8 +108,8 @@
 					type="email" name="correoPersona"
 					value="<%=persona.getCorreoPersona()%>">
 				<%
-						if (nuevaPersona) {
-					%>
+					if (nuevaPersona) {
+				%>
 				<label for="contrasenia">Contraseña: <span class="required">*</span></label>
 				<input type="password" name="contraseniaPersona1" value=""
 					required="required"> <label for="repetirContrasenia">Repetir
@@ -117,8 +117,8 @@
 				</label> <input type="password" name="contraseniaPersona2" value=""
 					required="required">
 				<%
-						}
-					%>
+					}
+				%>
 				<label for="salario">Salario: <span class="required">*</span></label>
 				<input type="number" min="1" max="999999999" name="salarioPersona"
 					required="required" value="<%=persona.getSalarioPersona()%>">
@@ -128,40 +128,40 @@
 					name="fechaIngresoPersona" required="required"
 					value="<%=persona.getFechaIngresoPersona()%>">
 				<%
-						if (persona.getEstadoPersona() == 2) {
-					%>
+					if (persona.getEstadoPersona() == 2) {
+				%>
 				<label for="fechaCancelacion">Fecha cancelación: <span
 					class="required">*</span></label> <input type="date"
 					name="fechaCancelacionPersona" required="required"
 					value="<%=persona.getFechaCancelacionPersona()%>">
 				<%
-						}
-					%>
+					}
+				%>
 
 				<%
-				if (nuevaPersona) {
-			%>
-				<input type="submit" name="guardar" value="Crear">
-				<input type="hidden" name="accion" value="guardar">
+					if (nuevaPersona) {
+				%>
+				<input type="submit" name="guardar" value="Crear"> <input
+					type="hidden" name="accion" value="guardar">
 				<%
-				} else {
-			%>
+					} else {
+				%>
 				<input type="submit" name="guardar" value="Guardar"> <input
 					type="hidden" name="accion" value="editar">
-					<button
-	onclick="window.location.href='reportePersona.jsp?cedulaPersona=<%=persona.getCedulaPersona()%>'"
-	type="button">Generar reporte</button>
+				<button
+					onclick="window.location.href='reportePersona.jsp?cedulaPersona=<%=persona.getCedulaPersona()%>'"
+					type="button">Generar reporte</button>
 				<%
-				if (!cedulaPersona.equals(persona.getCedulaPersona())
-							&& persona.getEstadoPersona() == 1) {
-			%>
+					if (!cedulaPersona.equals(persona.getCedulaPersona())
+								&& persona.getEstadoPersona() == 1) {
+				%>
 				<button
 					onclick="window.location.href='eliminarPersona.jsp?tipoPersona=<%=tipoPersona%>&cedulaPersona=<%=persona.getCedulaPersona()%>'"
 					type="button">Eliminar</button>
 				<%
-		}
-		}
-	%>
+					}
+					}
+				%>
 				<input type="hidden" name="tipoPersona" value="<%=tipoPersona%>">
 			</form>
 		</div>
