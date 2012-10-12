@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.logica">
+	<class name="Persona" table="PERSONA">
+		<id name="cedulaPersona" column="CEDULA_PERSONA" />
+
+		<property name="nombrePersona" column="NOMBRE_PERSONA" type="string"
+			length="200" />
+		<property name="apellidoPersona" column="APELLIDO_PERSONA"
+			type="string" length="200" />
+		<property name="telefonoPersona" column="TELEFONO_PERSONA"
+			type="string" length="200" />
+		<property name="direccionPersona" column="DIRECCION_PERSONA"
+			type="string" length="200" />
+		<property name="correoPersona" column="CORREO_PERSONA" type="string"
+			length="200" />
+		<property name="tipoPersona" column="TIPO_PERSONA" type="int" />
+		<property name="contraseniaPersona" column="CONTRASENIA_PERSONA"
+			type="string" length="200" />
+		<property name="estadoPersona" column="ESTADO_PERSONA" type="int" />
+		<property name="tipoCliente" column="TIPO_CLIENTE" type="int" />
+		<property name="fechaIngresoPersona" column="FECHA_INGRESO_PERSONA"
+			type="date" />
+		<property name="fechaCancelacionPersona" column="FECHA_CANCELACION_PERSONA"
+			type="date" />
+		<property name="salarioPersona" column="SALARIO_PERSONA"
+			type="int" />
+	</class>
+</hibernate-mapping>

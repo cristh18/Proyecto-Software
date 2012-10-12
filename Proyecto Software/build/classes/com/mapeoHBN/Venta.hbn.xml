@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.logica">
+	<class name="Venta" table="VENTA">
+		<id name="IdVenta" column="ID_VENTA">
+			<generator class="increment" />
+		</id>
+
+		<property name="fechaVenta" column="FECHA_VENTA" type="date" />
+
+		<many-to-one name="idClienteVenta" column="ID_CLIENTE_VENTA"
+			foreign-key="FK__ID_CLIENTE" class="Persona" />
+		<many-to-one name="idVendedorVenta" column="ID_VENDEDOR_VENTA"
+			foreign-key="FK__ID_VENDEDOR" class="Persona" />
+		<many-to-one name="idCarroVenta" column="ID_CARRO_VENTA"
+			foreign-key="FK__ID_CARRO" class="Carro" />
+
+	</class>
+</hibernate-mapping>

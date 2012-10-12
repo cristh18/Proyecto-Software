@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.logica">
+	<class name="Transmision" table="TRANSMISION">
+		<id name="idTransmision" column="ID_TRANSMISION">
+			<generator class="increment" />
+		</id>
+		<property name="nombreTransmision" column="NOMBRE_TRANSMISION"
+			type="string" length="200" />
+	</class>
+</hibernate-mapping>

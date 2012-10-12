@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.logica">
+	<class name="Empresa" table="EMPRESA">
+		<id column="CODIGO_EMPRESA" name="codigoEmpresa">
+			<generator class="increment" />
+		</id>
+		<property column="NIT_EMPRESA" name="nitEmpresa" type="string" />
+		<property column="RAZON_SOCIAL_EMPRESA" name="razonSocialEmpresa"
+			type="string" />
+		<property column="MISON_EMPRESA" name="misionEmpresa" type="string" />
+		<property column="VISION_EMPRESA" name="visionEmpresa" type="string" />
+	</class>
+</hibernate-mapping>

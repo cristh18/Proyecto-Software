@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.logica">
+	<class name="Imagen" table="IMAGEN">
+		<id name="IdImagen" column="ID_IMAGEN">
+			<generator class="increment" />
+		</id>
+		<property name="imagen">
+			<column name="IMAGEN" sql-type="LONGBLOB" />
+		</property>
+
+		<many-to-one name="idCarroImagen" column="ID_CARRO_IMAGEN"
+			foreign-key="FK_ID_CARRO" class="Carro" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.logica">
+	<class name="TipoCarro" table="TIPO_CARRO">
+		<id name="idTipoCarro" column="ID_TIPO_CARRO">
+			<generator class="increment" />
+		</id>
+		<property name="nombreTipoCarro" column="NOMBRE_TIPO_CARRO"
+			type="string" length="200" />
+	</class>
+</hibernate-mapping>

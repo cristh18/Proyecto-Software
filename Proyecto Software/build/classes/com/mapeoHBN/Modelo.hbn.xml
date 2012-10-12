@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.logica">
+	<class name="Modelo" table="MODELO">
+		<id column="ID_MODELO" name="idModelo">
+			<generator class="increment" />
+		</id>
+		<property column="NOMBRE_MODELO" name="nombreModelo" type="string" />
+
+		<many-to-one class="Marca" column="ID_MARCA_MODELO" name="idMarcaModelo" />
+	</class>
+</hibernate-mapping>

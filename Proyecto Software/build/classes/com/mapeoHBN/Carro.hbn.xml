@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.logica">
+	<class name="Carro" table="CARRO">
+		<id column="CODIGO_CARRO" name="codigoCarro">
+			<generator class="increment" />
+		</id>
+		<property name="placaCarro" column="PLACA_CARRO" type="string" />
+		<property name="cilindrajeCarro" column="CILINDRAJE_CARRO"
+			type="int" />
+		<property name="anioCarro" column="ANIO_CARRO" type="int" />
+		<property name="precioCarro" column="PRECIO_CARRO" type="int" />
+		<property name="estadoCarro" column="ESTADO_CARRO" type="int" />
+		<property name="fechaIngresoCarro" column="FECHA_INGRESO_CARRO"
+			type="date" />
+		<property name="fechaVentaCarro" column="FECHA_VENTA_CARRO"
+			type="date" />
+
+		<many-to-one name="idPropietarioPersona" column="ID_PROPIETARIO_PERSONA"
+			foreign-key="FK__ID_PERSONA" class="Persona" />
+		<many-to-one name="idColorCarro" column="ID_COLOR_CARRO"
+			foreign-key="FK__ID_COLOR" class="Color" />
+		<many-to-one name="idModeloCarro" column="ID_MODELO_CARRO"
+			foreign-key="FK__ID_MODELO" class="Modelo" />
+		<many-to-one name="idDireccionCarro" column="ID_DIRECCION_CARRO"
+			foreign-key="FK__ID_DIRECCION" class="Direccion" />
+		<many-to-one name="idVidrioCarro" column="ID_VIDRIO_CARRO"
+			foreign-key="FK__ID_VIDRIO" class="Vidrio" />
+		<many-to-one name="idCombustibleCarro" column="ID_COMBUSTIBLE_CARRO"
+			foreign-key="FK__ID_COMBUSTIBLE" class="Combustible" />
+		<many-to-one name="idTransmisionCarro" column="ID_TRANSMISION_CARRO"
+			foreign-key="FK__ID_TRANSMISION" class="Transmision" />
+		<many-to-one name="idTipoCarroCarro" column="ID_TIPO_CARRO_CARRO"
+			foreign-key="FK__ID_TIPO_CARRO" class="TipoCarro" />
+	</class>
+</hibernate-mapping>

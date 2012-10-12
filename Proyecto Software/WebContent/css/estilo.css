@@ -1,0 +1,698 @@
+/* css reset - makes the layout looking good in all browsers */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
+	{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+	{
+	display: block;
+}
+
+body {
+	margin: 0 auto;
+	background-color: white;
+	width: 940px;
+	background-color: #e0f3ff;
+	background-image: url("./../imagenes/bg.png");
+	background-repeat: repeat;
+}
+
+header {
+	top: 0;
+	left: 0;
+}
+
+#imgHeader {
+	background-color: black;
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+}
+
+/* Main Navigation */
+#nav {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+	background-color: #f5f5f5;
+	float: left;
+}
+
+ul#navigation {
+	margin: 0px auto;
+	position: relative;
+	float: left;
+	border-right: 1px solid #c4dbe7;
+	padding-left: 300px;
+}
+
+ul#navigation li {
+	display: inline;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	float: left;
+	position: relative;
+	border-top: 1px solid #c4dbe7;
+	border-bottom: 2px solid #c4dbe7;
+}
+
+ul#navigation li a {
+	padding: 10px 25px;
+	color: #616161;
+	text-shadow: 1px 1px 0px #fff;
+	text-decoration: none;
+	display: inline-block;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #C2C2C2;
+	border-top: 1px solid #fff;
+	background: #f5f5f5;
+	-webkit-transition: color 0.2s linear, background 0.2s linear;
+	-moz-transition: color 0.2s linear, background 0.2s linear;
+	-o-transition: color 0.2s linear, background 0.2s linear;
+	transition: color 0.2s linear, background 0.2s linear;
+}
+
+ul#navigation li a:hover {
+	background: #f8f8f8;
+	color: #282828;
+}
+
+ul#navigation li:hover>a {
+	background: #fff;
+}
+
+/* Drop-Down Navigation */
+ul#navigation li:hover>ul { /*these 2 styles are very important,
+being the ones which make the drop-down to appear on hover */
+	visibility: visible;
+	opacity: 1;
+}
+
+ul#navigation ul,ul#navigation ul li ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	/*the next 2 styles are very important,
+being the ones which make the drop-down to stay hidden */
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	z-index: 99999;
+	width: 180px;
+	background: #f8f8f8;
+	box-shadow: 1px 1px 3px #ccc;
+	/* css3 transitions for smooth hover effect */
+	-webkit-transition: opacity 0.2s linear, visibility 0.2s linear;
+	-moz-transition: opacity 0.2s linear, visibility 0.2s linear;
+	-o-transition: opacity 0.2s linear, visibility 0.2s linear;
+	transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+
+ul#navigation ul {
+	top: 43px;
+	left: 1px;
+}
+
+ul#navigation ul li ul {
+	top: 0;
+	left: 181px; /* strong related to width:180px; from above */
+}
+
+ul#navigation ul li {
+	clear: both;
+	width: 100%;
+	border: 0 none;
+	border-bottom: 1px solid #c9c9c9;
+}
+
+ul#navigation ul li a {
+	background: none;
+	padding: 7px 15px;
+	color: #616161;
+	text-shadow: 1px 1px 0px #fff;
+	text-decoration: none;
+	display: inline-block;
+	border: 0 none;
+	float: left;
+	clear: both;
+	width: 150px;
+}
+
+/* Admin Navigation */
+#navAdmin {
+	position: relative;
+	width: 720px;
+	margin: 0 auto;
+	background-color: blue;
+}
+
+ul#navigationAdmin {
+	margin: 0px auto;
+	position: relative;
+	float: left;
+	border-right: 1px solid #c4dbe7;
+	padding-left: 120px;
+}
+
+ul#navigationAdmin li {
+	display: inline;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	float: left;
+	position: relative;
+	border-top: 1px solid #c4dbe7;
+	border-bottom: 2px solid #c4dbe7;
+}
+
+ul#navigationAdmin li a {
+	padding: 10px 25px;
+	color: #616161;
+	text-shadow: 1px 1px 0px #fff;
+	text-decoration: none;
+	display: inline-block;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #C2C2C2;
+	border-top: 1px solid #fff;
+	background: #f5f5f5;
+	-webkit-transition: color 0.2s linear, background 0.2s linear;
+	-moz-transition: color 0.2s linear, background 0.2s linear;
+	-o-transition: color 0.2s linear, background 0.2s linear;
+	transition: color 0.2s linear, background 0.2s linear;
+}
+
+ul#navigationAdmin li a:hover {
+	background: #f8f8f8;
+	color: #282828;
+}
+
+ul#navigationAdmin li:hover>a {
+	background: #fff;
+}
+
+/* Drop-Down Navigation */
+ul#navigationAdmin li:hover>ul { /*these 2 styles are very important,
+being the ones which make the drop-down to appear on hover */
+	visibility: visible;
+	opacity: 1;
+}
+
+ul#navigationAdmin ul,ul#navigationAdmin ul li ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	/*the next 2 styles are very important,
+being the ones which make the drop-down to stay hidden */
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	z-index: 99999;
+	width: 180px;
+	background: #f8f8f8;
+	box-shadow: 1px 1px 3px #ccc;
+	/* css3 transitions for smooth hover effect */
+	-webkit-transition: opacity 0.2s linear, visibility 0.2s linear;
+	-moz-transition: opacity 0.2s linear, visibility 0.2s linear;
+	-o-transition: opacity 0.2s linear, visibility 0.2s linear;
+	transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+
+ul#navigationAdmin ul {
+	top: 43px;
+	left: 1px;
+}
+
+ul#navigationAdmin ul li ul {
+	top: 0;
+	left: 181px; /* strong related to width:180px; from above */
+}
+
+ul#navigationAdmin ul li {
+	clear: both;
+	width: 100%;
+	border: 0 none;
+	border-bottom: 1px solid #c9c9c9;
+}
+
+ul#navigationAdmin ul li a {
+	background: none;
+	padding: 7px 15px;
+	color: #616161;
+	text-shadow: 1px 1px 0px #fff;
+	text-decoration: none;
+	display: inline-block;
+	border: 0 none;
+	float: left;
+	clear: both;
+	width: 150px;
+}
+
+/* Vendedor Navigation */
+#navVend {
+	position: relative;
+	width: 720px;
+	margin: 0 auto;
+	background-color: yellow;
+}
+
+ul#navigationVend {
+	margin: 0px auto;
+	position: relative;
+	float: left;
+	border-right: 1px solid #c4dbe7;
+	padding-left: 170px;
+	border-right: 1px solid #c4dbe7;
+}
+
+ul#navigationVend li {
+	display: inline;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	float: left;
+	position: relative;
+	border-top: 1px solid #c4dbe7;
+	border-bottom: 2px solid #c4dbe7;
+}
+
+ul#navigationVend li a {
+	padding: 10px 25px;
+	color: #616161;
+	text-shadow: 1px 1px 0px #fff;
+	text-decoration: none;
+	display: inline-block;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #C2C2C2;
+	border-top: 1px solid #fff;
+	background: #f5f5f5;
+	-webkit-transition: color 0.2s linear, background 0.2s linear;
+	-moz-transition: color 0.2s linear, background 0.2s linear;
+	-o-transition: color 0.2s linear, background 0.2s linear;
+	transition: color 0.2s linear, background 0.2s linear;
+}
+
+ul#navigationVend li a:hover {
+	background: #f8f8f8;
+	color: #282828;
+}
+
+ul#navigationVend li:hover>a {
+	background: #fff;
+}
+
+/* Drop-Down Navigation */
+ul#navigationVend li:hover>ul { /*these 2 styles are very important,
+being the ones which make the drop-down to appear on hover */
+	visibility: visible;
+	opacity: 1;
+}
+
+ul#navigationVend ul,ul#navigationVend ul li ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	/*the next 2 styles are very important,
+being the ones which make the drop-down to stay hidden */
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	z-index: 99999;
+	width: 180px;
+	background: #f8f8f8;
+	box-shadow: 1px 1px 3px #ccc;
+	/* css3 transitions for smooth hover effect */
+	-webkit-transition: opacity 0.2s linear, visibility 0.2s linear;
+	-moz-transition: opacity 0.2s linear, visibility 0.2s linear;
+	-o-transition: opacity 0.2s linear, visibility 0.2s linear;
+	transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+
+ul#navigationVend ul {
+	top: 43px;
+	left: 1px;
+}
+
+ul#navigationVend ul li ul {
+	top: 0;
+	left: 181px; /* strong related to width:180px; from above */
+}
+
+ul#navigationVend ul li {
+	clear: both;
+	width: 100%;
+	border: 0 none;
+	border-bottom: 1px solid #c9c9c9;
+}
+
+ul#navigationVend ul li a {
+	background: none;
+	padding: 7px 15px;
+	color: #616161;
+	text-shadow: 1px 1px 0px #fff;
+	text-decoration: none;
+	display: inline-block;
+	border: 0 none;
+	float: left;
+	clear: both;
+	width: 150px;
+}
+
+/* Index Navigation */
+#navIndex {
+	position: relative;
+	margin: 0 auto;
+	background-color: silver;
+	float: left;
+}
+
+#navigationIndex ul {
+	display: none;
+	position: absolute;
+	left: 100%;
+	top: 0;
+	-moz-box-shadow: 0.7px 0.7px 1px #777777;
+	-webkit-box-shadow: 0.7px 0.7px 1px #777777;
+	box-shadow: 0.7px 0.7px 1px #777777;
+	background-color: #333;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding: 0 9px 9px;
+}
+
+#navigationIndex li:hover>* {
+	display: block;
+}
+
+#navigationIndex li {
+	position: relative;
+	display: block;
+	white-space: nowrap;
+	font-size: 0;
+}
+
+#navigationIndex li:hover {
+	z-index: 1;
+}
+
+#navigationIndex {
+	font-size: 0;
+	z-index: 999;
+	position: relative;
+	display: block;
+	float: left;
+	padding: 0 1px 1px;
+}
+
+#navigationIndex>li {
+	margin: 1px 0 0;
+}
+
+#navigationIndex a:active,ul#navigationIndex a:focus {
+	outline-style: none;
+}
+
+#navigationIndex a {
+	display: block;
+	vertical-align: middle;
+	text-align: left;
+	text-decoration: none;
+	font: bold 12px Arial;
+	color: #cccccc;
+	cursor: default;
+	padding: 10px;
+	background-color: #333;
+	background-image: url("mainbk.png");
+	background-repeat: repeat;
+	background-position: 0 200px;
+	border-width: 0px;
+	border-style: none;
+	border-color:;
+}
+
+#navigationIndex ul li {
+	float: none;
+	margin: 9px 0 0;
+}
+
+#navigationIndex ul a {
+	text-align: left;
+	padding: 8px 0 0 0;
+	background-color: #333;
+	background-image: none;
+	border-width: 1px 0 0 0;
+	border-style: solid;
+	border-color: #262626;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	font: 13px Arial;
+	color: #cccccc;
+	text-decoration: none;
+}
+
+#navigationIndex li:hover>a,#navigationIndex li a.pressed {
+	background-color: #00c4ff;
+	border-style: none;
+	color: #ffffff;
+	background-image: url("mainbk.png");
+	background-position: 0 100px;
+	text-decoration: none;
+}
+
+#navigationIndex ul li:hover>a,#navigationIndex ul li a.pressed {
+	background-color: #333;
+	background-image: none;
+	border-style: solid;
+	border-color: #262626;
+	color: #1F80AE;
+	text-decoration: none;
+}
+
+#navigationIndex _>li>a {
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contact-form {
+	background-color: #F2F7F9;
+	width: 215px;
+	padding: 20px;
+	margin: 50px auto;
+	border: 6px solid #8FB5C1;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	position: relative;
+}
+
+#contact-form h1 {
+	font-size: 18px;
+	text-align: center;
+}
+
+#contact-form h2 {
+	margin-bottom: 15px;
+	font-style: italic;
+	font-weight: normal;
+}
+
+#contact-form input,#contact-form select,#contact-form textarea,#contact-form label
+	{
+	font-size: 12px;
+	margin-bottom: 2px;
+}
+
+#contact-form input,#contact-form select,#contact-form textarea {
+	width: 200px;
+	border: 1px solid #CEE1E8;
+	margin-bottom: 20px;
+	padding: 4px;
+}
+
+#contact-form input:focus,#contact-form select:focus,#contact-form textarea:focus
+	{
+	border: 1px solid #AFCDD8;
+	background-color: #EBF2F4;
+}
+
+#contact-form textarea {
+	height: 50px;
+	resize: none;
+}
+
+#contact-form label {
+	display: block;
+}
+
+#contact-form .required {
+	font-weight: bold;
+	color: #F00;
+}
+
+#contact-form #submit-button {
+	width: 100px;
+	background-color: #333;
+	color: #FFF;
+	border: none;
+	display: block;
+	float: rightright;
+	margin-bottom: 0px;
+	margin-right: 6px;
+	background-color: #8FB5C1;
+	-moz-border-radius: 8px;
+}
+
+#contact-form #submit-button:hover {
+	background-color: #A6CFDD;
+}
+
+#contact-form #submit-button:active {
+	position: relative;
+	top: 1px;
+}
+
+#contact-form #loading {
+	width: 32px;
+	height: 32px;
+	background-image: url(../img/loading.gif);
+	display: block;
+	position: absolute;
+	rightright: 130px;
+	bottombottom: 16px;
+	display: none;
+}
+
+#errors {
+	border: solid 1px #E58E8E;
+	padding: 10px;
+	margin: 25px 0px;
+	display: block;
+	width: 437px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	background: #FFE6E6 url(../img/cancel_48.png) no-repeat 405px center;
+	display: none;
+}
+
+#errors li {
+	padding: 2px;
+	list-style: none;
+}
+
+#errors li:before {
+	content: ' - ';
+}
+
+#errors #info {
+	font-weight: bold;
+}
+
+#errors #info:before {
+	content: '';
+}
+
+#success {
+	border: solid 1px #83D186;
+	padding: 25px 10px;
+	margin: 25px 0px;
+	display: block;
+	width: 437px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	background: #D3EDD3 url(../img/accepted_48.png) no-repeat 405px center;
+	font-weight: bold;
+	display: none;
+}
+
+#errors.visible,#success.visible {
+	display: block;
+}
+
+#req-field-desc {
+	font-style: italic;
+}
+/* Remove box shadow firefox, chrome and opera put around required fields. It looks rubbish. */
+input:required,textarea:required {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+/* Normalize placeholder styles */
+/* chrome, safari */
+::-webkit-input-placeholder {
+	color: #CCC;
+	font-style: italic;
+}
+/* mozilla */
+input:-moz-placeholder,textarea:-moz-placeholder {
+	color: #CCC;
+	font-style: italic;
+}
+/* ie (faux placeholder) */
+input.placeholder-text,textarea.placeholder-text {
+	color: #CCC;
+	font-style: italic;
+}
+
+#errors li:before {
+	content: ' - ';
+}
+
+#contact-form #submit-button:active {
+	position: relative;
+	top: 1px;
+}
+
+input:required,textarea:required {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+
+/* chrome, safari */
+::-webkit-input-placeholder {
+	color: #CCC;
+	font-style: italic;
+}
+/* mozilla */
+input:-moz-placeholder,textarea:-moz-placeholder {
+	color: #CCC;
+	font-style: italic;
+}
+/* ie (faux placeholder) */
+input.placeholder-text,textarea.placeholder-text {
+	color: #CCC;
+	font-style: italic;
+}
