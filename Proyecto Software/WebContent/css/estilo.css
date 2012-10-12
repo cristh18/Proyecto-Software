@@ -38,7 +38,7 @@ header {
 /* Main Navigation */
 #nav {
 	position: relative;
-	width: 940px;
+	width: 740px;
 	margin: 0 auto;
 	background-color: #f5f5f5;
 	float: left;
@@ -49,7 +49,6 @@ ul#navigation {
 	position: relative;
 	float: left;
 	border-right: 1px solid #c4dbe7;
-	padding-left: 300px;
 }
 
 ul#navigation li {
@@ -146,12 +145,122 @@ ul#navigation ul li a {
 	width: 150px;
 }
 
+/* Login Navigation */
+#navLogin {
+	width: 200px;
+	margin: 0 auto;
+	background-color: #f5f5f5;
+	float: right;
+}
+
+ul#navigationLogin {
+	margin: 0px auto;
+	position: relative;
+	float: right;
+	border-right: 1px solid #c4dbe7;
+}
+
+ul#navigationLogin li {
+	display: inline;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	float: right;
+	position: relative;
+	border-top: 1px solid #c4dbe7;
+	border-bottom: 2px solid #c4dbe7;
+}
+
+ul#navigationLogin li a {
+	padding: 10px 25px;
+	color: #616161;
+	text-shadow: 1px 1px 0px #fff;
+	text-decoration: none;
+	display: inline-block;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #C2C2C2;
+	border-top: 1px solid #fff;
+	background: #f5f5f5;
+	-webkit-transition: color 0.2s linear, background 0.2s linear;
+	-moz-transition: color 0.2s linear, background 0.2s linear;
+	-o-transition: color 0.2s linear, background 0.2s linear;
+	transition: color 0.2s linear, background 0.2s linear;
+}
+
+ul#navigationLogin li a:hover {
+	background: #f8f8f8;
+	color: #282828;
+}
+
+ul#navigationLogin li:hover>a {
+	background: #fff;
+}
+
+/* Drop-Down Navigation */
+ul#navigationLogin li:hover>ul { /*these 2 styles are very important,
+being the ones which make the drop-down to appear on hover */
+	visibility: visible;
+	opacity: 1;
+}
+
+ul#navigationLogin ul,ul#navigationLogin ul li ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	/*the next 2 styles are very important,
+being the ones which make the drop-down to stay hidden */
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	z-index: 99999;
+	width: 180px;
+	background: #f8f8f8;
+	box-shadow: 1px 1px 3px #ccc;
+	/* css3 transitions for smooth hover effect */
+	-webkit-transition: opacity 0.2s linear, visibility 0.2s linear;
+	-moz-transition: opacity 0.2s linear, visibility 0.2s linear;
+	-o-transition: opacity 0.2s linear, visibility 0.2s linear;
+	transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+
+ul#navigationLogin ul {
+	top: 43px;
+	right: 1px;
+}
+
+ul#navigationLogin ul li ul {
+	top: 0;
+	right: 181px; /* strong related to width:180px; from above */
+}
+
+ul#navigationLogin ul li {
+	clear: both;
+	width: 100%;
+	border: 0 none;
+	border-bottom: 1px solid #c9c9c9;
+}
+
+ul#navigationLogin ul li a {
+	background: none;
+	padding: 7px 15px;
+	color: #616161;
+	text-shadow: 1px 1px 0px #fff;
+	text-decoration: none;
+	display: inline-block;
+	border: 0 none;
+	float: right;
+	clear: both;
+	width: 150px;
+}
+
 /* Admin Navigation */
 #navAdmin {
 	position: relative;
-	width: 720px;
+	width: 740px;
 	margin: 0 auto;
-	background-color: blue;
+	background-color: #f5f5f5;;
+	float: left;
 }
 
 ul#navigationAdmin {
@@ -159,7 +268,6 @@ ul#navigationAdmin {
 	position: relative;
 	float: left;
 	border-right: 1px solid #c4dbe7;
-	padding-left: 120px;
 }
 
 ul#navigationAdmin li {
@@ -259,17 +367,16 @@ ul#navigationAdmin ul li a {
 /* Vendedor Navigation */
 #navVend {
 	position: relative;
-	width: 720px;
+	width: 740px;
 	margin: 0 auto;
-	background-color: yellow;
+	background-color: #f5f5f5;
+	float: left;
 }
 
 ul#navigationVend {
 	margin: 0px auto;
 	position: relative;
 	float: left;
-	border-right: 1px solid #c4dbe7;
-	padding-left: 170px;
 	border-right: 1px solid #c4dbe7;
 }
 
@@ -481,25 +588,6 @@ ul#navigationVend ul li a {
 #navigationIndex _>li>a {
 	padding: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #contact-form {
 	background-color: #F2F7F9;

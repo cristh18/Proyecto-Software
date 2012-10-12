@@ -35,12 +35,17 @@
 						</ul></li>
 				</ul></li>
 			<li><a href="empresa.jsp">Ayuda</a></li>
+		</ul>
+	</nav>
+
+	<nav id="navLogin">
+		<ul id="navigationLogin">
 			<%
-					SessionDB.init();
-					String cedulaPersona = session.getAttribute("cedulaPersona")
-							.toString();
-					Persona persona = AdministradorPersona.getPersona(cedulaPersona);
-				%>
+				SessionDB.init();
+				String cedulaPersona = session.getAttribute("cedulaPersona")
+						.toString();
+				Persona persona = AdministradorPersona.getPersona(cedulaPersona);
+			%>
 			<li><a><%=persona.getNombrePersona()%></a>
 				<ul>
 					<li><a href="informacionPerfil.jsp">Informacion</a></li>

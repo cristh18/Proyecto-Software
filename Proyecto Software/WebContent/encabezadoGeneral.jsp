@@ -18,6 +18,11 @@
 		<ul id="navigation">
 			<li><a href="index.jsp">Inicio</a>
 			<li><a href="conocenos.jsp">Conocenos</a></li>
+		</ul>
+	</nav>
+
+	<nav id="navLogin">
+		<ul id="navigationLogin">
 			<li><a href="iniciarSesion.jsp">Iniciar sesión</a></li>
 		</ul>
 	</nav>
