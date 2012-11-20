@@ -46,7 +46,7 @@
 		<%
 			}
 		%>
-		<h1>Informacion Ventas</h1>
+		<h1>Información Ventas</h1>
 		<%
 			if (listaVentas.size() == 0) {
 		%>
@@ -140,7 +140,7 @@
 			type="button" value="Generar
 	reporte"> <input
 			onclick="window.location.href='editarVenta.jsp'" type="button"
-			value="Generar reporte">
+			value="Editar venta">
 	</section>
 </section>
 <jsp:include page="pieDePagina.jsp" />

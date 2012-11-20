@@ -22,12 +22,12 @@
 			<li><a>Agregar</a>
 				<ul>
 					<li><a href="agregarCliente.jsp">Cliente</a></li>
-					<li><a href="editarAutomovil.jsp">Automovil</a></li>
+					<li><a href="editarAutomovil.jsp">Automóvil</a></li>
 					<li><a href="editarVenta.jsp">Venta</a></li>
 				</ul></li>
 			<li><a>Consultas</a>
 				<ul>
-					<li><a href="automovil.jsp">Automoviles</a></li>
+					<li><a href="automovil.jsp">Automóviles</a></li>
 					<li><a>Ventas</a>
 						<ul>
 							<li><a href="filtroFechas.jsp">Filtrar por fechas</a></li>
@@ -48,8 +48,8 @@
 			%>
 			<li><a><%=persona.getNombrePersona()%></a>
 				<ul>
-					<li><a href="informacionPerfil.jsp">Informacion</a></li>
-					<li><a href="cambioContrasenia.jsp">Cambio contrasenia</a></li>
+					<li><a href="informacionPerfil.jsp">Información</a></li>
+					<li><a href="cambioContrasenia.jsp">Cambio contraseña</a></li>
 					<li><a href="cierreSesion.jsp">Salir</a></li>
 				</ul></li>
 		</ul>

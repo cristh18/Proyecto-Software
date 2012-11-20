@@ -8,11 +8,11 @@
 						.getParameter("error"));
 				if (numeroError == 1) {
 		%>
-	<h2>La cedula no existe.</h2>
+	<h2>La cédula no existe.</h2>
 	<%
 			} else if (numeroError == 2) {
 		%>
-	<h2>La contrasenia no corresponde a la cedula.</h2>
+	<h2>La contraseña no corresponde a la cédula.</h2>
 	<%
 			}
 			}
@@ -33,7 +33,7 @@
 
 			<input type="password" name="contraseniaPersona" value=""
 				required="required"> <input type="submit"
-				name="iniciarSesion" value="Iniciar sesion">
+				name="iniciarSesion" value="Iniciar sesión">
 		</form>
 	</div>
 

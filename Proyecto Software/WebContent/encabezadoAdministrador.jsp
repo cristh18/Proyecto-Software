@@ -24,7 +24,7 @@
 					<li><a href="editarPersona.jsp?tipoPersona=1">Administrador</a></li>
 					<li><a href="editarPersona.jsp?tipoPersona=2">Vendedor</a></li>
 					<li><a href="agregarCliente.jsp">Cliente</a></li>
-					<li><a href="editarAutomovil.jsp">Automovil</a></li>
+					<li><a href="editarAutomovil.jsp">Automóvil</a></li>
 					<li><a href="editarVenta.jsp">Venta</a></li>
 				</ul></li>
 			<li><a>Consultas</a>
@@ -32,7 +32,7 @@
 					<li><a href="persona.jsp?tipoPersona=1">Administradores</a></li>
 					<li><a href="persona.jsp?tipoPersona=2">Vendedores</a></li>
 					<li><a href="persona.jsp?tipoPersona=3">Clientes</a></li>
-					<li><a>Automoviles</a>
+					<li><a>Automóviles</a>
 						<ul>
 							<li><a href="automovil.jsp">Para la venta</a></li>
 							<li><a href="automovil.jsp?estado=1">Vendidos</a></li>

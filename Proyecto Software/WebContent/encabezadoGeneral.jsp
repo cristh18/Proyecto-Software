@@ -17,7 +17,7 @@
 	<nav id="nav">
 		<ul id="navigation">
 			<li><a href="index.jsp">Inicio</a>
-			<li><a href="conocenos.jsp">Conocenos</a></li>
+			<li><a href="conocenos.jsp">Conócenos</a></li>
 		</ul>
 	</nav>
 

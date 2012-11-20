@@ -25,7 +25,7 @@
 		<%
 			}
 		%>
-		<h1>Informacion perfil</h1>
+		<h1>Información perfil</h1>
 		<%
 			if (request.getParameter("aviso") != null) {
 				int numeroMensaje = Integer.parseInt(request

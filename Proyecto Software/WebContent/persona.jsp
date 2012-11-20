@@ -42,15 +42,15 @@
 			}
 			if (tipoPersona == 1) {
 		%>
-		<h1>Informacion Administradores</h1>
+		<h1>Información Administradores</h1>
 		<%
 			} else if (tipoPersona == 2) {
 		%>
-		<h1>Informacion Vendedores</h1>
+		<h1>Información Vendedores</h1>
 		<%
 			} else if (tipoPersona == 3) {
 		%>
-		<h1>Informacion Clientes</h1>
+		<h1>Información Clientes</h1>
 		<%
 			}
 			if (listaPersonas.size() == 0) {

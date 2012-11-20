@@ -48,7 +48,7 @@ if (tipoMenu == 1) {
 		<%
 			}
 		%>
-		<h1>Información automoviles.</h1>
+		<h1>Información automóviles.</h1>
 		<%
 			if (listaCarros.size() == 0) {
 		%>
@@ -160,7 +160,7 @@ if (tipoMenu == 1) {
 			}
 		%>
 		<input onclick="window.location.href='editarAutomovil.jsp'"
-			type="button" value="Agregar automovil">
+			type="button" value="Agregar automóvil">
 	<input
 	onclick="window.location.href='reporteCarros.jsp?estado=<%=estadoFinal%>'"
 	type="button" value="Generar reporte">

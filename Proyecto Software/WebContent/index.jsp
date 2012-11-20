@@ -113,7 +113,7 @@
 					}
 				%>
 			</ul></li>
-		<li><a>Direccion</a>
+		<li><a>Dirección</a>
 			<ul>
 				<%
 					for (int i = 0; i < listaDirecciones.size(); i++) {
@@ -125,7 +125,7 @@
 					}
 				%>
 			</ul></li>
-		<li><a>Transmision</a>
+		<li><a>Transmisión</a>
 			<ul>
 				<%
 					for (int i = 0; i < listaTransmisiones.size(); i++) {
