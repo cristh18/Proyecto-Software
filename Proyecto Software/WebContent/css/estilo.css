@@ -39,6 +39,13 @@ h1 {
 	width: 100%;
 }
 
+#imgEmpleado {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+}
+
 /* Main Navigation */
 #nav {
 	position: relative;
@@ -57,8 +64,7 @@ ul#navigation {
 
 ul#navigation li {
 	display: inline;
-	font-size: 12px;
-	font-weight: bold;
+	font: bold 12px Arial;
 	margin: 0;
 	padding: 0;
 	float: left;
@@ -69,7 +75,7 @@ ul#navigation li {
 
 ul#navigation li a {
 	padding: 10px 25px;
-	color: #616161;
+	color: black;
 	text-shadow: 1px 1px 0px #fff;
 	text-decoration: none;
 	display: inline-block;
@@ -166,8 +172,7 @@ ul#navigationLogin {
 
 ul#navigationLogin li {
 	display: inline;
-	font-size: 12px;
-	font-weight: bold;
+	font: bold 12px Arial;
 	margin: 0;
 	padding: 0;
 	float: right;
@@ -178,7 +183,7 @@ ul#navigationLogin li {
 
 ul#navigationLogin li a {
 	padding: 10px 25px;
-	color: #616161;
+	color: black;
 	text-shadow: 1px 1px 0px #fff;
 	text-decoration: none;
 	display: inline-block;
@@ -248,7 +253,7 @@ ul#navigationLogin ul li {
 ul#navigationLogin ul li a {
 	background: none;
 	padding: 7px 15px;
-	color: #616161;
+	color: black;
 	text-shadow: 1px 1px 0px #fff;
 	text-decoration: none;
 	display: inline-block;
@@ -276,8 +281,7 @@ ul#navigationAdmin {
 
 ul#navigationAdmin li {
 	display: inline;
-	font-size: 12px;
-	font-weight: bold;
+	font: bold 12px Arial;
 	margin: 0;
 	padding: 0;
 	float: left;
@@ -288,7 +292,7 @@ ul#navigationAdmin li {
 
 ul#navigationAdmin li a {
 	padding: 10px 25px;
-	color: #616161;
+	color: black;
 	text-shadow: 1px 1px 0px #fff;
 	text-decoration: none;
 	display: inline-block;
@@ -358,7 +362,7 @@ ul#navigationAdmin ul li {
 ul#navigationAdmin ul li a {
 	background: none;
 	padding: 7px 15px;
-	color: #616161;
+	color: black;
 	text-shadow: 1px 1px 0px #fff;
 	text-decoration: none;
 	display: inline-block;
@@ -386,8 +390,7 @@ ul#navigationVend {
 
 ul#navigationVend li {
 	display: inline;
-	font-size: 12px;
-	font-weight: bold;
+	font: bold 12px Arial;
 	margin: 0;
 	padding: 0;
 	float: left;
@@ -398,7 +401,7 @@ ul#navigationVend li {
 
 ul#navigationVend li a {
 	padding: 10px 25px;
-	color: #616161;
+	color: black;
 	text-shadow: 1px 1px 0px #fff;
 	text-decoration: none;
 	display: inline-block;
@@ -468,7 +471,7 @@ ul#navigationVend ul li {
 ul#navigationVend ul li a {
 	background: none;
 	padding: 7px 15px;
-	color: #616161;
+	color: black;
 	text-shadow: 1px 1px 0px #fff;
 	text-decoration: none;
 	display: inline-block;
@@ -494,7 +497,7 @@ ul#navigationVend ul li a {
 	-moz-box-shadow: 0.7px 0.7px 1px #777777;
 	-webkit-box-shadow: 0.7px 0.7px 1px #777777;
 	box-shadow: 0.7px 0.7px 1px #777777;
-	background-color: white;
+	background-color: #f5f5f5;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	padding: 0 9px 9px;
@@ -541,7 +544,7 @@ ul#navigationVend ul li a {
 	color: black;
 	cursor: default;
 	padding: 10px;
-	background-color: white;
+	background-color: #f5f5f5;
 	background-image: url("mainbk.png");
 	background-repeat: repeat;
 	background-position: 0 200px;
@@ -558,7 +561,7 @@ ul#navigationVend ul li a {
 #navigationIndex ul a {
 	text-align: left;
 	padding: 8px 0 0 0;
-	background-color: white;
+	background-color: #f5f5f5;
 	background-image: none;
 	border-width: 1px 0 0 0;
 	border-style: solid;
@@ -572,7 +575,6 @@ ul#navigationVend ul li a {
 }
 
 #navigationIndex li:hover>a,#navigationIndex li a.pressed {
-	
 	border-style: none;
 	color: #1F80AE;
 	background-image: url("mainbk.png");
@@ -581,7 +583,7 @@ ul#navigationVend ul li a {
 }
 
 #navigationIndex ul li:hover>a,#navigationIndex ul li a.pressed {
-	background-color: white;
+	background-color: #f5f5f5;
 	background-image: none;
 	border-style: solid;
 	border-color: #262626;

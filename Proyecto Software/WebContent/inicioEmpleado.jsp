@@ -9,10 +9,19 @@
 	if (tipoMenu == 1) {
 %>
 <jsp:include page="encabezadoAdministrador.jsp" />
+<h1>Bienvenido Administrador</h1>
+<section>
+	<img id="imgEmpleado" alt="administrador"
+		src="imagenes/administrador.png">
+</section>
 <%
 	} else if (tipoMenu == 2) {
 %>
 <jsp:include page="encabezadoVendedor.jsp" />
+<h1>Bienvenido Vendedor</h1>
+<section>
+	<img id="imgEmpleado" alt="vendedor" src="imagenes/vendedor.jpg">
+</section>
 <%
 	}
 %>
